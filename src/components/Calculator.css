@@ -1,0 +1,49 @@
+.Calculator {
+  display: grid;
+  align-items: stretch;
+  justify-items: stretch;
+
+  --gap: 0.2rem;
+  gap: var(--gap);
+  padding: var(--gap);
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+
+  background-color: var(--background-color);
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'display display display reset'
+    'one two three add'
+    'four five six subtract'
+    'seven eight nine multiply'
+    'zero decimal equals divide';
+}
+
+.Calculator .Display {
+  grid-area: display;
+}
+
+.Calculator button,
+.Calculator pre {
+  grid-area: var(--name);
+}
+
+@media screen and (min-width: 400px) {
+  .Calculator {
+    --gap: 0.5rem;
+  }
+
+  .Calculator .Button,
+  .Calculator .Display {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .Calculator .Button,
+  .Calculator .Display {
+    font-size: 4rem;
+  }
+}

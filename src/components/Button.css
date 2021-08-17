@@ -1,0 +1,21 @@
+.Button {
+  appearance: none;
+  border: none;
+
+  font-weight: bold;
+  border-radius: 0.25rem;
+  margin: var(--gap);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  background-color: var(--ui-color);
+  color: var(--text-color);
+}
+
+.Button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.Button:active {
+  transform: scale(1.05);
+}
