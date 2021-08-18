@@ -66,7 +66,7 @@ export function operateCalculation(commands: Command[]) {
 
     // special case for negative numbers
     if (command === 'subtract' && typing === '') {
-      typing = `-${typing}`;
+      typing = '-';
       continue;
     }
 
